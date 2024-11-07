@@ -42,13 +42,12 @@ function render(variables = {}) {
   if (variables.instagram == null)
     variables.instagram = "https://instagram.com/4geeksacademy";
 
-  const socialMediaPosition = document.getElementById("socialMediaPosition");
-  const miOpcion = document.getElementByClass("picker");
+  // if (variables.socialMediaPosition === "right") {
+  //   let newPosition = "position-right";
+  // } else {
+  //   let newPosition = "position-left";
+  // }
 
-  socialMediaPosition.addEventListener("change", () => {
-    const valorSeleccionado = socialMediaPosition.value;
-    miOpcion.textContent = valorSeleccionado;
-  });
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
@@ -56,7 +55,7 @@ function render(variables = {}) {
           <h1>${variables.name} ${variables.lastName}</h1>
           <h2>${variables.role}</h2>
           <h3>${variables.city}, ${variables.country}</h3>
-          <ul class="${valorSeleccionado}">
+          <ul class="${variables.socialMediaPosition}">
             <li><a href="${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
             <li><a href="${variables.github}"><i class="fab fa-github"></i></a></li>
             <li><a href="${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
