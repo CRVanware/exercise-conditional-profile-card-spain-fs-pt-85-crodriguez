@@ -42,12 +42,6 @@ function render(variables = {}) {
   if (variables.instagram == null)
     variables.instagram = "https://instagram.com/4geeksacademy";
 
-  // if (variables.socialMediaPosition === "right") {
-  //   let newPosition = "position-right";
-  // } else {
-  //   let newPosition = "position-left";
-  // }
-
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
